@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "325537558690",
+    "project_id": "pasabuyexpressapp-651d1",
+    "storage_bucket": "pasabuyexpressapp-651d1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:325537558690:android:1aafa287e3a7e6753267fb",
+        "android_client_info": {
+          "package_name": "com.example.pasabuyexpressapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "325537558690-v6qv8sr3kv03m8ov2kt3thhj9t6b9tqm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAB3oCGXiZtGsBDk7WAZ4M94sxn49lnKws"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "325537558690-v6qv8sr3kv03m8ov2kt3thhj9t6b9tqm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
