@@ -13,4 +13,7 @@
     <string name="username">Username</string>
     <string name="select_user">Select User</string>
     <string name="type_a_message">Type a Message</string>
+    <string name="online">online</string>
+
+
 </resources>

@@ -33,7 +33,7 @@
         app:layout_constraintStart_toEndOf="@id/imageProfile"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintWidth_percent="0.75"/>
-    
+
     <TextView
         android:id="@+id/textDateTime"
         android:layout_width="0dp"

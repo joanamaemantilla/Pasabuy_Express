@@ -61,9 +61,30 @@
             android:paddingEnd="@dimen/_16sdp"
             android:textColor="@color/secondary_text"
             android:textSize="@dimen/_13ssp"/>
-            //tools:ignore="LabelFor"/>
 
-    <FrameLayout
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBuyer"
+            android:layout_width="146dp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:text="I AM A BUYER"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11ssp"
+            android:textStyle="bold"
+            app:cornerRadius="@dimen/_8sdp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPasabuy"
+            android:layout_width="146dp"
+            android:layout_height="@dimen/_40sdp"
+            android:text="PASABUY"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11ssp"
+            android:textStyle="bold"
+            app:cornerRadius="@dimen/_8sdp" />
+
+        <FrameLayout
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_20sdp"
@@ -97,6 +118,7 @@
             android:textColor="@color/btncreate"
             android:textSize="@dimen/_15ssp"
             android:textStyle="bold"/>
+
 
 
 

@@ -22,10 +22,11 @@
         app:layout_constraintTop_toTopOf="parent"
         android:tint="@color/white"/>
 
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="USER 1"
+        android:text="@string/select_user"
         android:textColor="@color/white"
         android:textSize="@dimen/_14ssp"
         android:textStyle="bold"
@@ -33,6 +34,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/imageBack"/>
+
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -71,6 +73,10 @@
             android:textSize="@dimen/_12ssp"
             android:visibility="gone"/>
 
+
+
     </FrameLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
