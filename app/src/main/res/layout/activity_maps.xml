@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".gmap.MapsActivity" />
+
+    <com.mancj.materialsearchbar.MaterialSearchBar
+        style="@style/MaterialSearchBarLight"
+        map:mt_speechMode="false"
+        map:mt_hint="Search a place"
+        map:mt_maxSuggestionsCount="10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchBar"
+        android:layout_margin="16dp"
+        map:mt_navIconEnabled="true"
+        android:elevation="5dp"
+        android:outlineProvider="bounds"
+        map:mt_placeholder="Search a place"/>
+
+<!--    <Button-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:text="Find Store"-->
+<!--        android:layout_margin="16dp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:padding="16dp"-->
+<!--        android:id="@+id/btnFind"/>-->
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="78dp"
+        android:layout_height="59dp"
+        android:layout_gravity="center"
+        android:layout_centerInParent="true"/>
+</RelativeLayout>
