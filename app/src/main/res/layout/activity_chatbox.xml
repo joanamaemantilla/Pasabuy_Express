@@ -104,6 +104,17 @@
 
     </FrameLayout>
 
+    <Button
+        android:id="@+id/startMap"
+        android:layout_width="178dp"
+        android:layout_height="67dp"
+        android:layout_marginBottom="340dp"
+        android:text="START NOW!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabNewChat"
         android:layout_width="wrap_content"

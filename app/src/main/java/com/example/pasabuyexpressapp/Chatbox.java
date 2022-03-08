@@ -1,6 +1,8 @@
 package com.example.pasabuyexpressapp;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -8,12 +10,16 @@ import android.util.Base64;
 import android.view.View;
 import android.widget.Toast;
 
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+
 import com.example.pasabuyexpressapp.activities.BaseActivity;
 import com.example.pasabuyexpressapp.activities.ChatActivity;
 import com.example.pasabuyexpressapp.activities.SignInActivity;
 import com.example.pasabuyexpressapp.activities.UsersActivity;
 import com.example.pasabuyexpressapp.adapters.RecentConversationsAdapter;
 import com.example.pasabuyexpressapp.databinding.ActivityChatboxBinding;
+import com.example.pasabuyexpressapp.gmap.MapsActivity;
 import com.example.pasabuyexpressapp.listeners.ConversionListener;
 import com.example.pasabuyexpressapp.models.ChatMessage;
 import com.example.pasabuyexpressapp.models.User;
@@ -49,6 +55,7 @@ public class Chatbox extends BaseActivity implements ConversionListener {
         setContentView(binding.getRoot());
         preferenceManager = new PreferenceManager(getApplicationContext());
         init();
+        getLocationPermission();
         loadUserDetails();
         getToken();
         setListeners();
@@ -66,6 +73,19 @@ public class Chatbox extends BaseActivity implements ConversionListener {
         binding.imageSignOut.setOnClickListener(v -> signOut());
         binding.fabNewChat.setOnClickListener(view ->
                 startActivity(new Intent(getApplicationContext(), UsersActivity.class)));
+        binding.startMap.setOnClickListener(view ->
+                startActivity(new Intent(getApplicationContext(), MapsActivity.class)));
+    }
+
+    /*
+     * Check if location is on if not request a location permission
+     * */
+    private void getLocationPermission() {
+        if( ContextCompat.checkSelfPermission(this.getApplicationContext(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[] {Manifest.permission.ACCESS_FINE_LOCATION}, 1);
+        }else if(ContextCompat.checkSelfPermission(this.getApplicationContext(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[] {Manifest.permission.ACCESS_COARSE_LOCATION}, 1);
+        }
     }
 
     private void loadUserDetails() {

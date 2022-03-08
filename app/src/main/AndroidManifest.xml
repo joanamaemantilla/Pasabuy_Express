@@ -3,6 +3,8 @@
     package="com.example.pasabuyexpressapp" >
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -12,6 +14,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PasabuyExpressApp" >
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/GOOGLE_API_KEY" />
+
+        <activity
+            android:name=".gmap.MapsActivity"
+            android:exported="false"
+            android:label="Pasabuy Map" />
+
         <activity
             android:name=".ProductListActivity"
             android:exported="false" />
